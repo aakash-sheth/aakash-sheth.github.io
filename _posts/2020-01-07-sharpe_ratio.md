@@ -3,7 +3,7 @@ title: "Data Wrangling Project"
 date: 2020-01-07
 tags: [data wrangling, data science, data science for finance, data visualization ]
 header:
-  image: "/images/perceptron/sharpe_ratio_header.jpg"
+  image: "/images/sharpe_ratio/sharpe_ratio_header.jpg"
 excerpt: "Investment analysis using data science"
 mathjax: "true"
 ---
