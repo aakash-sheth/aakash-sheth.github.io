@@ -16,14 +16,14 @@ The best measure to comapre two investments apple to apple with different return
 
 $$ Sharpe Ratio= \frac{(R_x-R_t)}{Std R_x}$$
 
-Where\
-$$ R_x= $$ Expected investment return\
-$$ R_t= $$ Risk free rate of return\
-$$ Std R_x= $$ Standard daviation of portfolio return
+Where<br/>
+$$ R_x= $$ Expected investment return<br/>
+$$ R_t= $$ Risk free rate of return<br/>
+$$ Std R_x= $$ Standard daviation of portfolio return<br/>
 
- A higher Sharpe ratio means that the reward will be higher for a given amount of risk. It is common to compare a specific opportunity against a benchmark that represents an entire category of investments.\
+ A higher Sharpe ratio means that the reward will be higher for a given amount of risk. It is common to compare a specific opportunity against a benchmark that represents an entire category of investments.<br/>
 
-The Sharpe ratio is usually calculated for a portfolio and uses the risk-free interest rate as benchmark. The standard risk free interest rate is 3-month Treasury Bill Rate. Here, to make things easier I will consider S&P 500 as my risk free rate (Benchmark) and instead of entier portfolio I will just consider Amazon and Microsoft Share prices. you can easily find share prices online on websites like yahoo finance, google finance etc. If you want to follow along with me, you can find data [here](https://github.com/aakash-sheth/sharpe-ratio).\
+The Sharpe ratio is usually calculated for a portfolio and uses the risk-free interest rate as benchmark. The standard risk free interest rate is 3-month Treasury Bill Rate. Here, to make things easier I will consider S&P 500 as my risk free rate (Benchmark) and instead of entier portfolio I will just consider Amazon and Microsoft Share prices. you can easily find share prices online on websites like yahoo finance, google finance etc. If you want to follow along with me, you can find data [here](https://github.com/aakash-sheth/sharpe-ratio).<br/>
 
 Lets get started now.
 ```python
@@ -111,9 +111,9 @@ benchmark_data.describe()
 <img src="{{ site.url }}{{ site.baseurl }}/images/sharpe_ratio/describe2.png" alt="Benchmark description">
 
 
-To calculate **Sharepe Ratio** we need returns of 2 investment opportunities under consideration, in our case return on investment for AMZN and MSFT stock.\
+To calculate **Sharepe Ratio** we need returns of 2 investment opportunities under consideration, in our case return on investment for AMZN and MSFT stock.<br/>
 
-Our data shows the historical value of each investment, not the return. To calculate the return, we need to calculate the percentage change in value from one day to the next. We'll also take a look at the summary statistics because these will become our inputs as we calculate the Sharpe Ratio.\
+Our data shows the historical value of each investment, not the return. To calculate the return, we need to calculate the percentage change in value from one day to the next. We'll also take a look at the summary statistics because these will become our inputs as we calculate the Sharpe Ratio.<br/>
 
 ```python
 # calculate daily stock_data returns
@@ -164,7 +164,7 @@ print(excess_returns.describe())
 
 ## The Sharpe Ratio, Step 1: The Average Difference in Daily Returns Stocks vs S&P 500
 
-Now we can finally start computing the Sharpe Ratio. First we need to calculate the average of the excess_returns. This tells us how much more or less the investment yields per day compared to the benchmark.\
+Now we can finally start computing the Sharpe Ratio. First we need to calculate the average of the excess_returns. This tells us how much more or less the investment yields per day compared to the benchmark.<br/>
 
 ```python
 # calculate the mean of excess_returns 
