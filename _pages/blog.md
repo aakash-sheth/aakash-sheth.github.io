@@ -1,13 +1,13 @@
 ---
 layout: posts
-permalink: /data-wrangling/
-title: "Data Wrangling projects"
+permalink: /blog/
+title: "Data Science Blogs"
 author_profile: true
 header:
   image: "/images/fort point.png"
 ---
 
-<!-- {% include base_path %}
+{% include base_path %}
 {% include group-by-array collection=site.posts field="tags" %}
 
 {% for tag in group_names %}
@@ -16,4 +16,4 @@ header:
   {% for post in posts %}
     {% include archive-single.html %}
   {% endfor %}
-{% endfor %} -->
+{% endfor %}

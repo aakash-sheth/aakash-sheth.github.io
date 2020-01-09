@@ -6,6 +6,7 @@ header:
   image: "/images/sharpe_ratio/sharpe_ratio_header.jpg"
 excerpt: "Investment analysis using data science"
 mathjax: "true"
+classes: wide
 ---
 
 # How to use data science to compare two different investments apple to apple?
@@ -21,7 +22,7 @@ $$ R_x= $$ Expected investment return<br/>
 $$ R_t= $$ Risk free rate of return<br/>
 $$ Std R_x= $$ Standard daviation of portfolio return<br/>
 
- A higher Sharpe ratio means that the reward will be higher for a given amount of risk. It is common to compare a specific opportunity against a benchmark that represents an entire category of investments.<br/>
+A higher Sharpe ratio means that the reward will be higher for a given amount of risk. It is common to compare a specific opportunity against a benchmark that represents an entire category of investments.<br/>
 
 The Sharpe ratio is usually calculated for a portfolio and uses the risk-free interest rate as benchmark. The standard risk free interest rate is 3-month Treasury Bill Rate. Here, to make things easier I will consider S&P 500 as my risk free rate (Benchmark) and instead of entier portfolio I will just consider Amazon and Microsoft Share prices. you can easily find share prices online on websites like yahoo finance, google finance etc. If you want to follow along with me, you can find data [here](https://github.com/aakash-sheth/sharpe-ratio).<br/>
 
