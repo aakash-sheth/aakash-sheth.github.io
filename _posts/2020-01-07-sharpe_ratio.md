@@ -1,6 +1,7 @@
 ---
+layout: single
 classes: wide
-title: "Data Wrangling Project"
+title: "How to use data science to compare two different investments apple to apple?"
 date: 2020-01-07
 tags: [data wrangling, data science, data science for finance, data visualization ]
 header:
