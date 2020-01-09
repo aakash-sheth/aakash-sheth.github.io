@@ -99,16 +99,16 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "custom"
+  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "UA-119777725-2"
     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
   name             : "Aakash Sheth"
-  avatar           : "/images/bio-photo.jpg"
+  avatar           : "/images/bio-pic.jpg"
   bio              : "Data Scientist"
   location         : "United States"
   email            :
@@ -126,11 +126,11 @@ author:
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
+      icon: "fab fa-fw fa-github-square"
       url: "https://github.com/aakash-sheth"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+    - label: LinkedIn
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/aakash-sheth"
 
 # Site Footer
 footer:
@@ -147,12 +147,12 @@ footer:
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github-square"
+      url: "https://github.com/aakash-sheth"
+    - label: LinkedIn
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/aakash-sheth"
 
 
 # Reading Files
