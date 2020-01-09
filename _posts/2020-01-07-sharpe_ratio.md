@@ -70,7 +70,7 @@ print(benchmark_data.head())
 ```
 <img src="{{ site.url }}{{ site.baseurl }}/images/sharpe_ratio/head3.png" alt="Benchmark Data Head">
 
-Now lets check out our data to find out how many obsewrvations we have at our disposal.
+Now lets check out our data to find out how many observations we have at our disposal.
 
 ```python
 # Display summary for stock_data
@@ -84,7 +84,7 @@ print(benchmark_data.head())
 ```
 <img src="{{ site.url }}{{ site.baseurl }}/images/sharpe_ratio/info1.png" alt="Data Info">
 
-Before we compare either Microsoft or Amazon investment with the index of the 500 largest companies in the US, let's visualize the data, so that we better understanding about what we're dealing with.
+Before we compare investment either in Microsoft or Amazon with the index of the largest 500 companies in the US, let's visualize the data, so that we'll get better understanding about what we're dealing with.
 
 ```python
 # visualize the stock_data
