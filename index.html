@@ -5,3 +5,199 @@ header:
   caption: "Image credit: [**Unsplash**](http://simpledesktops.com/browse/)"
 ---
 
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+        body{
+            font-family: Helvetica, Arial, sans-serif;
+          }
+          .container{
+            width: 50%;
+            margin: 0 auto;
+          }
+          @keyframes load{
+            from {
+              width: 0%
+            }
+          }
+          @-webkit-keyframes load{
+            from {
+              width: 0%
+            }
+          }
+          @-moz-keyframes load{
+            from {
+              width: 0%
+            }
+          }
+          @-o-keyframes load{
+            from {
+              width: 0%
+            }
+          }
+          
+          .bar{
+            background-color: #EEE;
+            padding: 2px;
+            border-radius: 15px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #FFF;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+          }
+          .bar::before{
+            content:  attr(data-skill);
+            background-color: #f3b0ff;
+            display: inline-block;
+            padding: 5px 0 5px 10px;
+            border-radius: inherit;
+            animation: load 2s 0s;
+            -webkit-animation: load 2s 0s;
+            -moz-animation: load 2s 0s;
+            -o-animation: load 2s 0s;
+          }
+          
+          .bar.front::before{
+            background-color: #ffcc33;
+          }
+          .bar.back::before{
+            background-color: #a6cfe3;
+          }
+          
+          .bar.learning::before{
+            width: calc(20% - 10px);
+          }
+          .bar.basic::before{
+            width: calc(40% - 10px);
+          }
+          .bar.intermediate::before{
+            width: calc(60% - 10px);
+          }
+          .bar.advanced::before{
+            width: calc(80% - 10px);
+          }
+          .bar.expert::before{
+            width: calc(100% - 10px);
+          }
+          
+           .single-skill p {
+            margin-top: 30px;
+            margin-bottom: 5px;
+            text-align: right;
+          }
+          
+          .sb_progress {
+            height: 14px !important;
+            border-radius: 12px;
+            border: 3px solid #eee;
+          }
+          
+          .sb_bar {
+            height: 8px !important;
+            border-radius: 12px;
+          }
+          
+</style>   
+
+<div class="title text-center">
+        <h1 class="mb-10">Skills Expertisse</h1>
+          1 - Basic <span style="display: inline-block; width: 2ch;">	</span>
+             2 - Novice <span style="display: inline-block; width: 2ch;">	</span>
+             3 - Intermediate<span style="display: inline-block; width: 2ch;">	</span>
+              <p>4 - Advanced<span style="display: inline-block; width: 2ch;">	</span>
+                 5 - Expert</p><p>
+
+</p></div>
+
+<div class="container">
+        <h1>Skill Set</h1>
+        <div class="bar learning" data-skill="TDD"></div>
+        <div class="bar back basic" data-skill="Python"></div>
+        <div class="bar back intermediate" data-skill="C#"></div>
+        <div class="bar front advanced" data-skill="CSS3"></div>
+        <div class="bar front expert" data-skill="HTML5"></div>
+    
+      </div>
+
+      <div class="container">
+            <div class="row skillbar-wraps">
+                <div class="col-lg-4 skill-left">
+                    <h4 class="text-center pt-50"> Devops </h4>
+                    <div class="single-skill">
+                        <p>
+                            Server Management (Linux / Bash) -   3
+                        </p>
+                        <div class="skill sb_progress" data-width="60" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 60%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
+                    </div>
+                    <div class="single-skill">
+                        <p>
+                            Database Manipulation (SQL) -   5
+                        </p>
+                        <div class="skill sb_progress" data-width="100" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 100%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
+                    </div>
+                    <div class="single-skill">
+                        <p>
+                            Cluster Computing (HIVE) - 3
+                        </p>
+                        <div class="skill sb_progress" data-width="60" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 60%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
+                    </div>
+                </div>
+    
+    
+                <div class="col-lg-4 skill-right">
+                    <h4 class="text-center pt-50"> Data Analytics </h4>
+                    <div class="single-skill">
+                        <p>
+                            Visualization and Presentation - 5
+                        </p>
+                        <div class="skill sb_progress" data-width="100" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 100%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
+                    </div>
+    
+                    <div class="single-skill">
+                        <p>
+                            Python - 5
+                        </p>
+                        <div class="skill sb_progress" data-width="100" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 100%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
+                    </div>
+    
+    
+                    <div class="single-skill">
+                        <p>
+                            Statistical Methods - 3
+                        </p>
+                        <div class="skill sb_progress" data-width="60" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 60%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4 skill-right">
+                    <h4 class="text-center pt-50">Machine Learning</h4>
+                    <div class="single-skill">
+                        <p>
+                            Deep Learning (PyTorch) - 4
+                        </p>
+                        <div class="skill sb_progress" data-width="80" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 80%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
+                    </div>
+    
+                    <div class="single-skill">
+                        <p>
+                            Natural Language Processing - 4
+                        </p>
+                        <div class="skill sb_progress" data-width="80" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 80%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
+                    </div>
+                    <div class="single-skill">
+                        <p>
+                            Predictive Modelling (SKLearn) - 4
+                        </p>
+                        <div class="skill sb_progress" data-width="80" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 80%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+</html>
+
+
