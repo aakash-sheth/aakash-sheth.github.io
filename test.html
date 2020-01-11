@@ -2,154 +2,74 @@
 permalink: /test/
 title: "test"
 ---
-<html lang="en"> 
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-        a{
-            color: #282425!important;	
-            }
-            ul.nav.nav-tabs > li{
-                display: inline-block;
-                line-height: 50px;
-                height: 100%;
-                text-transform:uppercase;
-            }
-            ul.nav.nav-tabs > li a{
-                display:block;
-                padding:15px;
-                color: #282425!important;
-                
-            }
-            ul.nav.nav-tabs > li a:hover, ul.nav.nav-tabs > li:hover{
-                background:	#FB282F;
-                color:#fff!important;
-                text-decoration: none!important;
-            }
-            ul.nav.nav-tabs > li a.active{
-                background:	#282425;
-                color:#fff!important;
-                text-decoration: none!important;
-            }
-            .card-header {
-                background-color: rgb(245,245,245,0.3)!important;
-                border-radius:0!important;
-            }
-            .card{
-            border-radius:0!important;
-            }
-            
-            .card > .card-header a::before {
-                font-family: fontawesome;
-                content: "\f067 ";
-                color: #282425;
-                float: right;
-                margin-right: 15px;
-                font-weight: 400;
-                position: absolute;
-                right: 0;
-            }
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
 </style>
-<div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <p class="my-5"><a href="https://www.solodev.com"><img src="https://raw.githubusercontent.com/solodev/expanding-faq-tabs/master/solodev-logo.png" alt="logo" class="img-fluid d-block mx-auto"/></a></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <ul class="nav nav-tabs">
-                    <li ><a data-toggle="tab" href="#tab1" aria-selected="true" class="active">Infrastructure</a></li>
-                    <li><a data-toggle="tab" href="#tab2" aria-selected="false">About Solodev</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                
-                <div class="tab-content">
-                    <div id="tab1" class="tab-pane fade show active">
-                        <div class="accordion">
-                            <div class="card">
-                                <div class="card-header" id="infraOne">
-                                    <a href="#collapseOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        <p class="mb-0">
-                                      What is the uptime for Solodev CMS? 
-                                        </p>
-                                    </a>
-                                </div>
-                                <div id="collapseOne" class="collapse" aria-labelledby="infraOne" data-parent="#accordion">
-                                    <div class="card-body">
-                                    Using Amazon AWS technology which is an industry leader for reliability you will be able to experience an uptime in the vicinity of 99.95%.
-                                    </div>
-                                </div>
-                            </div><!-- close card-->
-                            <div class="card">
-                                <div class="card-header" id="infraTwo">
-                                    <a href="#collapseTwo" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                      <p class="mb-0">What technology does Solodev CMS use?</p>
-                                    </a>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="infraTwo" data-parent="#accordion">
-                                    <div class="card-body">
-                                    Solodev CMS is built using PHP, Javascript, HTML and CSS.
-                                    </div>
-                                </div>
-                            </div><!-- card-->
-                            <div class="card">
-                                <div class="card-header" id="infraThree">
-                                    <a href="#collapseThree" class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <p class="mb-0">What browsers does Solodev CMS support?</p>
-                                    </a>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="infraThree" data-parent="#accordion">
-                                    <div class="card-body">
-                                    We support the current and previous major releases of Google Chrome™, Firefox®, Safari®, Microsoft® Edge™, and Internet Explorer® on a rolling basis. Each time a new version is released, we begin supporting that version and stop supporting the third most recent version.
-                                    </div>
-                                </div>
-                            </div><!-- card-->
-                        </div><!-- accordion-->
-                    </div><!-- tab 1-->
-                <div id="tab2" class="tab-pane fade">
-                    <div class="accordion">
-                        <div class="card">
-                            <div class="card-header" id="aboutOne">
-                                <a href="#collapseFour"   data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseOne">
-                                    <p class="mb-0">What are the benefits of Solodev CMS?</p>
-                                </a>
-                            </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="aboutOne" data-parent="#accordion">
-                                <div class="card-body">
-                                With Solodev CMS, you and your visitors will benefit from a finely-tuned technology stack that drives the highest levels of site performance, speed and engagement - and contributes more to your bottom line. 
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="aboutTwo">
-                                <a href="#collapseFive" class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
-                                  <p class="mb-0">How easy is it to build a website with Solodev CMS?</p>
-                                </a>
-                            </div>
-                            <div id="collapseFive" class="collapse" aria-labelledby="aboutTwo" data-parent="#accordion">
-                                <div class="card-body">
-                                Building a website is extremely easy. With a working knowledge of HTML and CSS you will be able to have a site up and running in no time.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="aboutThree">
-                                <a href="#collapseSix" class="collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
-                                  <p class="mb-0">Can I get a personalized demonstration of Solodev CMS?</p>
-                                </a>
-                            </div>
-                            <div id="collapseSix" class="collapse" aria-labelledby="aboutThree" data-parent="#accordion">
-                                <div class="card-body">
-                                Yes, click here to request a demo and one of our representatives will contact you shortly to setup a time convenient to you.
-                                </div>
-                            </div>
-                        </div>
-                    </div><!-- accordion-->
-                </div><!-- tab2 -->
-              </div><!-- tab content-->
-            </div>
-        </div>
-    </div>
+</head>
+<body>
+
+<h2>Collapsibles</h2>
+
+<p>A Collapsible:</p>
+<button type="button" class="collapsible">Open Collapsible</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<p>Collapsible Set:</p>
+<button type="button" class="collapsible">Open Section 1</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button type="button" class="collapsible">Open Section 2</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button type="button" class="collapsible">Open Section 3</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+</body>
 </html>
