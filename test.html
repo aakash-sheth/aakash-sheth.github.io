@@ -3,6 +3,7 @@ permalink: /test/
 title: "test"
 ---
 <html>
+<link rel="stylesheet" href="css/bootstrap.css">
 <style>
         body{
             font-family: Helvetica, Arial, sans-serif;
@@ -77,7 +78,31 @@ title: "test"
             width: calc(100% - 10px);
           }
           
+          .column {
+            /* Old Chrome, Safari, Opera */
+            -webkit-column-count: 3; 
+            -webkit-column-width: 100px;
+              
+            /* Old Firefox */
+            -moz-column-count: 3;
+            -moz-column-width: 100px;
+          
+            /* Statndard syntax */
+            column-count: 3;
+            column-width: 100px;
+          }
+        
 </style>   
+
+<div class="title text-center">
+        <h1 class="mb-10">Skills Expertisse</h1>
+          1 - Basic <span style="display: inline-block; width: 2ch;">	</span>
+             2 - Novice <span style="display: inline-block; width: 2ch;">	</span>
+             3 - Intermediate<span style="display: inline-block; width: 2ch;">	</span>
+              <p>4 - Advanced<span style="display: inline-block; width: 2ch;">	</span>
+                 5 - Expert</p><p>
+
+</p></div>
 
 <div class="container">
         <h1>Skill Set</h1>
@@ -89,3 +114,4 @@ title: "test"
     
       </div>
 </html>
+
