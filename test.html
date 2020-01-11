@@ -4,88 +4,71 @@ title: "test"
 ---
 <html>
 <style>
-        body{
-            font-family: Helvetica, Arial, sans-serif;
+        * {
+            box-sizing: border-box
           }
-          .container{
-            width: 50%;
+          
+          .skillResponsive {
+            max-width: 1000px;
             margin: 0 auto;
-          }
-          @keyframes load{
-            from {
-              width: 0%
-            }
-          }
-          @-webkit-keyframes load{
-            from {
-              width: 0%
-            }
-          }
-          @-moz-keyframes load{
-            from {
-              width: 0%
-            }
-          }
-          @-o-keyframes load{
-            from {
-              width: 0%
-            }
+            padding: 0 15px;
           }
           
-          .bar{
-            background-color: #EEE;
-            padding: 2px;
-            border-radius: 15px;
-            margin-bottom: 5px;
-            font-size: 14px;
-            color: #FFF;
-            font-weight: bold;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-          }
-          .bar::before{
-            content:  attr(data-skill);
-            background-color: #f3b0ff;
-            display: inline-block;
-            padding: 5px 0 5px 10px;
-            border-radius: inherit;
-            animation: load 2s 0s;
-            -webkit-animation: load 2s 0s;
-            -moz-animation: load 2s 0s;
-            -o-animation: load 2s 0s;
+          .container {
+            background-color: #ddd;
           }
           
-          .bar.front::before{
-            background-color: #ffcc33;
-          }
-          .bar.back::before{
-            background-color: #a6cfe3;
-          }
-          
-          .bar.learning::before{
-            width: calc(20% - 10px);
-          }
-          .bar.basic::before{
-            width: calc(40% - 10px);
-          }
-          .bar.intermediate::before{
-            width: calc(60% - 10px);
-          }
-          .bar.advanced::before{
-            width: calc(80% - 10px);
-          }
-          .bar.expert::before{
-            width: calc(100% - 10px);
+          .skills {
+            text-align: right;
+            padding: 10px;
+            color: white;
           }
           
+          .html {
+            width: 90%;
+            background-color: #4CAF50;
+          }
+          
+          .css {
+            width: 80%;
+            background-color: #2196F3;
+          }
+          
+          .js {
+            width: 65%;
+            background-color: #f44336;
+          }
+          
+          .php {
+            width: 60%;
+            background-color: #808080;
+          }  
 </style>   
 
-<div class="container">
-        <h1>Skill Set</h1>
-        <div class="bar learning" data-skill="TDD"></div>
-        <div class="bar back basic" data-skill="Python"></div>
-        <div class="bar back intermediate" data-skill="C#"></div>
-        <div class="bar front advanced" data-skill="CSS3"></div>
-        <div class="bar front expert" data-skill="HTML5"></div>
-    
-      </div>
+<<h2 align="center">My Skills</h2>
+
+<div class="skillResponsive">
+  <!--Div for Skill Bar-->
+
+  <p>HTML</p>
+  <div class="container">
+    <div class="skills html">90%</div>
+  </div>
+
+  <p>CSS</p>
+  <div class="container">
+    <div class="skills css">80%</div>
+  </div>
+
+  <p>JavaScript</p>
+  <div class="container">
+    <div class="skills js">65%</div>
+  </div>
+
+  <p>PHP</p>
+  <div class="container">
+    <div class="skills php">60%</div>
+  </div>
+
+</div>
 </html>
