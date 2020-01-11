@@ -2,417 +2,154 @@
 permalink: /test/
 title: "test"
 ---
-<html lang="en">
-<style>     
-        @import url(https://fonts.googleapis.com/css?family=Raleway:400,900);
-
-        body{
-          font-family: 'Raleway', sans-serif;
-          color: #333;
-        }
-        
-        header h1{
-          text-align: center;
-          font-weight: bold;
-          margin-top: 0;
-        }
-          
-         header p{
-           text-align: center;
-           margin-bottom: 0;
-         }
-        
-        .hexa{
-          border: 0px;
-          float: left;
-          text-align: center;
-          height: 35px;
-          width: 60px;
-          font-size: 22px;
-          background: #f0f0f0;
-          color: #3c3c3c;
-          position: relative;
-          margin-top: 15px;
-        }
-        
-        .hexa:before{
-          content: ""; 
-          position: absolute; 
-          left: 0; 
-          width: 0; 
-          height: 0;
-          border-bottom: 15px solid #f0f0f0;
-          border-left: 30px solid transparent;
-          border-right: 30px solid transparent;
-          top: -15px;
-        }
-        
-        .hexa:after{
-          content: ""; 
-          position: absolute; 
-          left: 0; 
-          width: 0; 
-          height: 0;
-          border-left: 30px solid transparent;
-          border-right: 30px solid transparent;
-          border-top: 15px solid #f0f0f0;
-          bottom: -15px;
-        }
-        
-        .timeline {
-          position: relative;
-          padding: 0;
-          width: 100%;
-          margin-top: 20px;
-          list-style-type: none;
-        }
-        
-        .timeline:before {
-          position: absolute;
-          left: 50%;
-          top: 0;
-          content: ' ';
-          display: block;
-          width: 2px;
-          height: 100%;
-          margin-left: -1px;
-          background: rgb(213,213,213);
-          background: -moz-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-          background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
-          background: -webkit-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-          background: -o-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-          background: -ms-linear-gradient(top, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-          background: linear-gradient(to bottom, rgba(213,213,213,0) 0%, rgb(213,213,213) 8%, rgb(213,213,213) 92%, rgba(213,213,213,0) 100%);
-          z-index: 5;
-        }
-        
-        .timeline li {
-          padding: 2em 0;
-        }
-        
-        .timeline .hexa{
-          width: 16px;
-          height: 10px;
-          position: absolute;
-          background: #00c4f3;
-          z-index: 5;
-          left: 0;
-          right: 0;
-          margin-left:auto;
-          margin-right:auto;
-          top: -30px;
-          margin-top: 0;
-        }
-        
-        .timeline .hexa:before {
-          border-bottom: 4px solid #00c4f3;
-          border-left-width: 8px;
-          border-right-width: 8px;
-          top: -4px;
-        }
-        
-        .timeline .hexa:after {
-          border-left-width: 8px;
-          border-right-width: 8px;
-          border-top: 4px solid #00c4f3;
-          bottom: -4px;
-        }
-        
-        .direction-l,
-        .direction-r {
-          float: none;
-          width: 100%;
-          text-align: center;
-        }
-        
-        .flag-wrapper {
-          text-align: center;
-          position: relative;
-        }
-        
-        .flag {
-          position: relative;
-          display: inline;
-          background: rgb(255,255,255);
-          font-weight: 600;
-          z-index: 15;
-          padding: 6px 10px;
-          text-align: left;
-          border-radius: 5px;
-        }
-        
-        .direction-l .flag:after,
-        .direction-r .flag:after {
-          content: "";
-          position: absolute;
-          left: 50%;
-          top: -15px;
-          height: 0;
-          width: 0;
-          margin-left: -8px;
-          border: solid transparent;
-          border-bottom-color: rgb(255,255,255);
-          border-width: 8px;
-          pointer-events: none;
-        }
-        
-        .direction-l .flag {
-          -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-          -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-          box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-        }
-        
-        .direction-r .flag {
-          -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-          -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-          box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-        }
-        
-        .time-wrapper {
-          display: block;
-          position: relative;
-          margin: 4px 0 0 0;
-          z-index: 14;
-          line-height: 1em;
-          vertical-align: middle;
-          color: #fff;
-        }
-        
-        .direction-l .time-wrapper {
-          float: none;
-        }
-        
-        .direction-r .time-wrapper {
-          float: none;
-        }
-        
-        .time {
-          background: #00c4f3;
-          display: inline-block;
-          padding: 8px;
-        }
-        
-        .desc {
-          position: relative;
-          margin: 1em 0 0 0;
-          padding: 1em;
-          background: rgb(254,254,254);
-          -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-          -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-          box-shadow: 0 0 1px rgba(0,0,0,0.20);
-          z-index: 15;
-        }
-        
-        .direction-l .desc,
-        .direction-r .desc {
-          position: relative;
-          margin: 1em 1em 0 1em;
-          padding: 1em;
-          z-index: 15;
-        }
-        
-        @media(min-width: 768px){
-          .timeline {
-            width: 660px;
-            margin: 0 auto;
-            margin-top: 20px;
-          }
-        
-          .timeline li:after {
-            content: "";
-            display: block;
-            height: 0;
-            clear: both;
-            visibility: hidden;
-          }
-          
-          .timeline .hexa {
-            left: -28px;
-            right: auto;
-            top: 8px;
-          }
-        
-          .timeline .direction-l .hexa {
-            left: auto;
-            right: -28px;
-          }
-        
-          .direction-l {
-            position: relative;
-            width: 310px;
-            float: left;
-            text-align: right;
-          }
-        
-          .direction-r {
-            position: relative;
-            width: 310px;
-            float: right;
-            text-align: left;
-          }
-        
-          .flag-wrapper {
-            display: inline-block;
-          }
-          
-          .flag {
-            font-size: 18px;
-          }
-        
-          .direction-l .flag:after {
-            left: auto;
-            right: -16px;
-            top: 50%;
-            margin-top: -8px;
-            border: solid transparent;
-            border-left-color: rgb(254,254,254);
-            border-width: 8px;
-          }
-        
-          .direction-r .flag:after {
-            top: 50%;
-            margin-top: -8px;
-            border: solid transparent;
-            border-right-color: rgb(254,254,254);
-            border-width: 8px;
-            left: -8px;
-          }
-        
-          .time-wrapper {
-            display: inline;
-            vertical-align: middle;
-            margin: 0;
-          }
-        
-          .direction-l .time-wrapper {
-            float: left;
-          }
-        
-          .direction-r .time-wrapper {
-            float: right;
-          }
-        
-          .time {
-            padding: 5px 10px;
-          }
-        
-          .direction-r .desc {
-            margin: 1em 0 0 0.75em;
-          }
-        }
-        
-        @media(min-width: 992px){
-          .timeline {
-            width: 800px;
-            margin: 0 auto;
-            margin-top: 20px;
-          }
-        
-          .direction-l {
-            position: relative;
-            width: 380px;
-            float: left;
-            text-align: right;
-          }
-        
-          .direction-r {
-            position: relative;
-            width: 380px;
-            float: right;
-            text-align: left;
-          }
-        }
-
+<html lang="en"> 
+<style>
+        a{
+            color: #282425!important;	
+            }
+            ul.nav.nav-tabs > li{
+                display: inline-block;
+                line-height: 50px;
+                height: 100%;
+                text-transform:uppercase;
+            }
+            ul.nav.nav-tabs > li a{
+                display:block;
+                padding:15px;
+                color: #282425!important;
+                
+            }
+            ul.nav.nav-tabs > li a:hover, ul.nav.nav-tabs > li:hover{
+                background:	#FB282F;
+                color:#fff!important;
+                text-decoration: none!important;
+            }
+            ul.nav.nav-tabs > li a.active{
+                background:	#282425;
+                color:#fff!important;
+                text-decoration: none!important;
+            }
+            .card-header {
+                background-color: rgb(245,245,245,0.3)!important;
+                border-radius:0!important;
+            }
+            .card{
+            border-radius:0!important;
+            }
+            
+            .card > .card-header a::before {
+                font-family: fontawesome;
+                content: "\f067 ";
+                color: #282425;
+                float: right;
+                margin-right: 15px;
+                font-weight: 400;
+                position: absolute;
+                right: 0;
+            }
 </style>
-<body>
-<header>
-        
-        <h1>My Experience</h1>
-    </header>
-    
-    <ul class="timeline">
-      <!-- Item 1 -->
-      <li>
-        <div class="direction-r">
-          <div class="flag-wrapper">
-            <span class="hexa"></span>
-            <span class="flag">Data Science Analyst</span>
-            <span class="time-wrapper"><span class="time"> July 2018-Present</span></span>
-          </div>
-          <div class="desc">
-              <center><b>Redperit LLC</b></center>
-          </div>
-        </div>
-      </li>
-    
-      <!-- Item 2 -->
-      <li>
-        <div class="direction-l">
-          <div class="flag-wrapper">
-            <span class="hexa"></span>
-            <span class="flag">Masters of Science,Industrial Engg.</span>
-            <span class="time-wrapper"><span class="time">May 2019</span></span>
-          </div>
-          <div class="desc">
-              <center><b>University of South Florida</b></center>
-              
+<div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p class="my-5"><a href="https://www.solodev.com"><img src="https://raw.githubusercontent.com/solodev/expanding-faq-tabs/master/solodev-logo.png" alt="logo" class="img-fluid d-block mx-auto"/></a></p>
             </div>
         </div>
-      </li>
-    
-      <!-- Item 3 -->
-      <li>
-        <div class="direction-r">
-          <div class="flag-wrapper">
-            <span class="hexa"></span>
-            <span class="flag">Six Sigma Green Belt</span>
-            <span class="time-wrapper"><span class="time">October 2017</span></span>
-          </div>
-          <div class="desc">
-              <center> <b>Institute of Industrial and Systems Engineering</b> </center> 
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+                    <li ><a data-toggle="tab" href="#tab1" aria-selected="true" class="active">Infrastructure</a></li>
+                    <li><a data-toggle="tab" href="#tab2" aria-selected="false">About Solodev</a></li>
+                </ul>
             </div>
         </div>
-      </li>
-    
-      <!-- Item 4 -->
-      <li>
-        <div class="direction-l">
-            <div class="flag-wrapper">
-            <span class="hexa"></span>
-            <span class="flag">Data Analyst</span>
-            <span class="time-wrapper"><span class="time">January 2017- July 2017 </span></span>
-            </div>
-            <div class="desc">
-                <center><b>Tata Consultancy Services </b></center>
+        <div class="row">
+            <div class="col-sm-12">
+                
+                <div class="tab-content">
+                    <div id="tab1" class="tab-pane fade show active">
+                        <div class="accordion">
+                            <div class="card">
+                                <div class="card-header" id="infraOne">
+                                    <a href="#collapseOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <p class="mb-0">
+                                        What is the uptime for Solodev CMS? 
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="infraOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                    Using Amazon AWS technology which is an industry leader for reliability you will be able to experience an uptime in the vicinity of 99.95%.
+                                    </div>
+                                </div>
+                            </div><!-- close card-->
+                            <div class="card">
+                                <div class="card-header" id="infraTwo">
+                                    <a href="#collapseTwo" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <p class="mb-0">What technology does Solodev CMS use?</p>
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="infraTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                    Solodev CMS is built using PHP, Javascript, HTML and CSS.
+                                    </div>
+                                </div>
+                            </div><!-- card-->
+                            <div class="card">
+                                <div class="card-header" id="infraThree">
+                                    <a href="#collapseThree" class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <p class="mb-0">What browsers does Solodev CMS support?</p>
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="infraThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                    We support the current and previous major releases of Google Chrome™, Firefox®, Safari®, Microsoft® Edge™, and Internet Explorer® on a rolling basis. Each time a new version is released, we begin supporting that version and stop supporting the third most recent version.
+                                    </div>
+                                </div>
+                            </div><!-- card-->
+                        </div><!-- accordion-->
+                    </div><!-- tab 1-->
+                <div id="tab2" class="tab-pane fade">
+                    <div class="accordion">
+                        <div class="card">
+                            <div class="card-header" id="aboutOne">
+                                <a href="#collapseFour"   data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseOne">
+                                    <p class="mb-0">What are the benefits of Solodev CMS?</p>
+                                </a>
+                            </div>
+                            <div id="collapseFour" class="collapse" aria-labelledby="aboutOne" data-parent="#accordion">
+                                <div class="card-body">
+                                With Solodev CMS, you and your visitors will benefit from a finely-tuned technology stack that drives the highest levels of site performance, speed and engagement - and contributes more to your bottom line. 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="aboutTwo">
+                                <a href="#collapseFive" class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                                    <p class="mb-0">How easy is it to build a website with Solodev CMS?</p>
+                                </a>
+                            </div>
+                            <div id="collapseFive" class="collapse" aria-labelledby="aboutTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                Building a website is extremely easy. With a working knowledge of HTML and CSS you will be able to have a site up and running in no time.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header" id="aboutThree">
+                                <a href="#collapseSix" class="collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                                    <p class="mb-0">Can I get a personalized demonstration of Solodev CMS?</p>
+                                </a>
+                            </div>
+                            <div id="collapseSix" class="collapse" aria-labelledby="aboutThree" data-parent="#accordion">
+                                <div class="card-body">
+                                Yes, click here to request a demo and one of our representatives will contact you shortly to setup a time convenient to you.
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- accordion-->
+                </div><!-- tab2 -->
+                </div><!-- tab content-->
             </div>
         </div>
-        </li>
-    
-        <!-- Item 5 -->
-        <li>
-        <div class="direction-r">
-            <div class="flag-wrapper">
-            <span class="hexa"></span>
-            <span class="flag">Bachelors of Technology, Metallurgy</span>
-            <span class="time-wrapper"><span class="time">May 2016</span></span>
-            </div>
-            <div class="desc">
-                <center><b>College of Engineering Pune </b></center> 
-            </div>
-        </div>
-        </li>
-        <li>
-        <div class="direction-l">
-            <div class="flag-wrapper">
-            <span class="hexa"></span>
-            <span class="flag">Research Intern</span>
-            <span class="time-wrapper"><span class="time"> May 2014- August 2014</span></span>
-            </div>
-            <div class="desc">
-                <center><b>Mahindra CIE Automotive </b></center>
-            </div>
-        </div>
-        </li>
-    </ul>   
-</body>
+    </div>
 </html>
