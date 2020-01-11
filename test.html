@@ -3,70 +3,89 @@ permalink: /test/
 title: "test"
 ---
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-.collapsible {
-  background-color: #00c4f3;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
+        body{
+            font-family: Helvetica, Arial, sans-serif;
+          }
+          .container{
+            width: 50%;
+            margin: 0 auto;
+          }
+          @keyframes load{
+            from {
+              width: 0%
+            }
+          }
+          @-webkit-keyframes load{
+            from {
+              width: 0%
+            }
+          }
+          @-moz-keyframes load{
+            from {
+              width: 0%
+            }
+          }
+          @-o-keyframes load{
+            from {
+              width: 0%
+            }
+          }
+          
+          .bar{
+            background-color: #EEE;
+            padding: 2px;
+            border-radius: 15px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #FFF;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+          }
+          .bar::before{
+            content:  attr(data-skill);
+            background-color: #f3b0ff;
+            display: inline-block;
+            padding: 5px 0 5px 10px;
+            border-radius: inherit;
+            animation: load 2s 0s;
+            -webkit-animation: load 2s 0s;
+            -moz-animation: load 2s 0s;
+            -o-animation: load 2s 0s;
+          }
+          
+          .bar.front::before{
+            background-color: #ffcc33;
+          }
+          .bar.back::before{
+            background-color: #a6cfe3;
+          }
+          
+          .bar.learning::before{
+            width: calc(20% - 10px);
+          }
+          .bar.basic::before{
+            width: calc(40% - 10px);
+          }
+          .bar.intermediate::before{
+            width: calc(60% - 10px);
+          }
+          .bar.advanced::before{
+            width: calc(80% - 10px);
+          }
+          .bar.expert::before{
+            width: calc(100% - 10px);
+          }
+          
+</style>   
 
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
-</style>
-</head>
-<body>
-
-<h2>Any Questions?</h2>
-
-
-<button type="button" class="collapsible">How long you have been practicing data science and machine learning?</button>
-<div class="content">
-  <p>I discovered data science and machine learning at the beginning of my masters around september 2017 in University of south florida. Since then, I have immersed myself in data science communities on Medium and across the web.
-        I have rich experience in building machine learning solutions. I have built models in multi-calss text classification, financial transaction prediction, stock market prediction, and clustring algorithms .
-        I also have research experince working with Genrative adversarial network models for medical image super resolution. </p>
-</div>
-<button type="button" class="collapsible">Do you have experience working with/developing API's? </button>
-<div class="content">
-  <p>I have worked on several api applications in my current job as well as during my freelance work. You can find code for few my api development projects in my github repo. </p>
-</div>
-<button type="button" class="collapsible">What kind of work do you see yourself doing?</button>
-<div class="content">
-  <p>I am interested in building modular machine learning applications that can communicate with existing production systems.
-     I describe my perfect future position to be a mix of data science, machine learning engineering. Essentially a machine learning specialist with the skills to deploy a model to production.</p>
-</div>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
-
-</body>
+<div class="container">
+        <h1>Skill Set</h1>
+        <div class="bar learning" data-skill="TDD"></div>
+        <div class="bar back basic" data-skill="Python"></div>
+        <div class="bar back intermediate" data-skill="C#"></div>
+        <div class="bar front advanced" data-skill="CSS3"></div>
+        <div class="bar front expert" data-skill="HTML5"></div>
+    
+      </div>
 </html>
