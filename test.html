@@ -8,195 +8,79 @@ classes: wide
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<style>
-        body{
-            font-family: Helvetica, Arial, sans-serif;
-          }
-          .container{
-            width: 50%;
-            margin: 0 auto;
-          }
-          @keyframes load{
-            from {
-              width: 0%
-            }
-          }
-          @-webkit-keyframes load{
-            from {
-              width: 0%
-            }
-          }
-          @-moz-keyframes load{
-            from {
-              width: 0%
-            }
-          }
-          @-o-keyframes load{
-            from {
-              width: 0%
-            }
-          }
-          
-          .bar{
-            background-color: #EEE;
-            padding: 2px;
-            border-radius: 15px;
-            margin-bottom: 5px;
-            font-size: 14px;
-            color: #FFF;
-            font-weight: bold;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-          }
-          .bar::before{
-            content:  attr(data-skill);
-            background-color: #f3b0ff;
-            display: inline-block;
-            padding: 5px 0 5px 10px;
-            border-radius: inherit;
-            animation: load 2s 0s;
-            -webkit-animation: load 2s 0s;
-            -moz-animation: load 2s 0s;
-            -o-animation: load 2s 0s;
-          }
-          
-          .bar.front::before{
-            background-color: #ffcc33;
-          }
-          .bar.back::before{
-            background-color: #a6cfe3;
-          }
-          
-          .bar.learning::before{
-            width: calc(20% - 10px);
-          }
-          .bar.basic::before{
-            width: calc(40% - 10px);
-          }
-          .bar.intermediate::before{
-            width: calc(60% - 10px);
-          }
-          .bar.advanced::before{
-            width: calc(80% - 10px);
-          }
-          .bar.expert::before{
-            width: calc(100% - 10px);
-          }
-          
-           .single-skill p {
-            margin-top: 30px;
-            margin-bottom: 5px;
-            text-align: right;
-          }
-          
-          .sb_progress {
-            height: 14px !important;
-            border-radius: 12px;
-            border: 3px solid #eee;
-          }
-          
-          .sb_bar {
-            height: 8px !important;
-            border-radius: 12px;
-          }
-          
-</style>   
+<link rel="stylesheet" href="/assets/css/home.css">
+<link rel="stylesheet" href="/assets/css/icons.css">
 
-<div class="title text-center">
-        <h1 class="mb-10">Skills Expertisse</h1>
-          1 - Basic <span style="display: inline-block; width: 2ch;">	</span>
-             2 - Novice <span style="display: inline-block; width: 2ch;">	</span>
-             3 - Intermediate<span style="display: inline-block; width: 2ch;">	</span>
-              <p>4 - Advanced<span style="display: inline-block; width: 2ch;">	</span>
-                 5 - Expert</p><p>
+<section class="services-area section-gap">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content  col-lg-7">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Areas of Interest</h1>
+                        <p> Take a look at some of the things I love working on.
+                    </p></div>
+                </div>
+            </div>
+            <div class="row">
 
-</p></div>
-
-<div class="container">
-        <h1>Skill Set</h1>
-        <div class="bar learning" data-skill="TDD"></div>
-        <div class="bar back basic" data-skill="Python"></div>
-        <div class="bar back intermediate" data-skill="C#"></div>
-        <div class="bar front advanced" data-skill="CSS3"></div>
-        <div class="bar front expert" data-skill="HTML5"></div>
-    
-      </div>
-
-      <div class="container">
-            <div class="row skillbar-wraps">
-                <div class="col-lg-4 skill-left">
-                    <h4 class="text-center pt-50"> Devops </h4>
-                    <div class="single-skill">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-chart-bars"></span>
+                        <a><h4>Data Analytics</h4></a>
                         <p>
-                            Server Management (Linux / Bash) -   3
+                            I love telling a story. Making a beautiful and compelling presentation is one of my favorite skills.
                         </p>
-                        <div class="skill sb_progress" data-width="60" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 60%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
-                    </div>
-                    <div class="single-skill">
-                        <p>
-                            Database Manipulation (SQL) -   5
-                        </p>
-                        <div class="skill sb_progress" data-width="100" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 100%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
-                    </div>
-                    <div class="single-skill">
-                        <p>
-                            Cluster Computing (HIVE) - 3
-                        </p>
-                        <div class="skill sb_progress" data-width="60" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 60%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
                     </div>
                 </div>
-    
-    
-                <div class="col-lg-4 skill-right">
-                    <h4 class="text-center pt-50"> Data Analytics </h4>
-                    <div class="single-skill">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-bubble"></span>
+                        <a><h4>NLP</h4></a>
                         <p>
-                            Visualization and Presentation - 5
+                            I have worked with researchers to apply NLP techniques to make sense of the motivations behind human interactions.
                         </p>
-                        <div class="skill sb_progress" data-width="100" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 100%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
-                    </div>
-    
-                    <div class="single-skill">
-                        <p>
-                            Python - 5
-                        </p>
-                        <div class="skill sb_progress" data-width="100" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 100%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
-                    </div>
-    
-    
-                    <div class="single-skill">
-                        <p>
-                            Statistical Methods - 3
-                        </p>
-                        <div class="skill sb_progress" data-width="60" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 60%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
                     </div>
                 </div>
-    
-                <div class="col-lg-4 skill-right">
-                    <h4 class="text-center pt-50">Machine Learning</h4>
-                    <div class="single-skill">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-graduation-hat"></span>
+                        <a><h4>Machine Learning</h4></a>
                         <p>
-                            Deep Learning (PyTorch) - 4
+                            Machine learning is more than an API call to scikit-learn. I love the math and theory as well as the implementation.
                         </p>
-                        <div class="skill sb_progress" data-width="80" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 80%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
-                    </div>
-    
-                    <div class="single-skill">
-                        <p>
-                            Natural Language Processing - 4
-                        </p>
-                        <div class="skill sb_progress" data-width="80" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 80%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
-                    </div>
-                    <div class="single-skill">
-                        <p>
-                            Predictive Modelling (SKLearn) - 4
-                        </p>
-                        <div class="skill sb_progress" data-width="80" style="position: relative; width: 100%; background-color: rgb(221, 221, 221); height: 30px;"><div class="sb_bar" style="position: absolute; width: 80%; height: 100%; background-color: rgb(51, 122, 183);"><div class="sb_label" style="padding-left: 5px; line-height: 30px; color: rgb(255, 255, 255);"></div></div></div>
                     </div>
                 </div>
-    
+
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-layers"></span>
+                        <a><h4>Parallel Computing</h4></a>
+                        <p>
+                            I regularly extract data from Hadoop databases using the HIVE framework.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-laptop-phone"></span>
+                        <a><h4>Model Deployment</h4></a>
+                        <p>
+                            I implement machine learning models in real world production systems using REST APIs.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-cloud-check"></span>
+                        <a><h4>Cloud Compute</h4></a>
+                        <p>
+                                I maintain servers for database storage, model training, and model deployment.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-
-</html>
-
-
+    </section>
