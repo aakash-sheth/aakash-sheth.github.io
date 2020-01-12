@@ -3,14 +3,7 @@
    ========================================================================== */
 
 .masthead {
-  // position: relative;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  // height: $masthead-height;
-  
-  height: 50px; // need a magic number here which may break in different viewports
-  background: white;  // set a color to hide content that may appear below masthead
+  position: relative;
   border-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
