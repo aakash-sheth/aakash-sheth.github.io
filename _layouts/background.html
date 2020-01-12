@@ -1,0 +1,19 @@
+---
+---
+
+<html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="js">
+
+    <div class="initial-content">
+      {{ content }}
+    </div>
+
+    <div id="footer" class="page__footer">
+      <footer>
+        {% include_cached footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
+</html>
