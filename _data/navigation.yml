@@ -5,7 +5,7 @@ main:
   - title: "Data Science Blogs"
     url: /blog/
   - title: "Resume"
-    url: \docs\Resume_Aakash_Sheth(DM108).pdf
+    url: /docs/Resume_Aakash_Sheth(DM108).pdf
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
