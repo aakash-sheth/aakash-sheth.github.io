@@ -71,8 +71,7 @@ body{
     width: calc(100% - 10px);
   }
 
-  /* Add the following CSS block to your own
-stylesheet. */
+  /* Following Css is for the what interest me section */
 .lnr {
     display: inline-block;
     fill: currentColor;
