@@ -13,13 +13,13 @@
     cursor: pointer;
   }
   
-  .button1 {
+  .button {
     background-color: white; 
     color: black; 
     border: 2px solid #008CBA;
   }
   
-  .button1:hover {
+  .button:hover {
     background-color: #008CBA;
     color: white;
   }
