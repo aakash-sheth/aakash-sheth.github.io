@@ -70,3 +70,57 @@ body{
   .bar.expert::before{
     width: calc(100% - 10px);
   }
+
+  /* Add the following CSS block to your own
+stylesheet. */
+.lnr {
+    display: inline-block;
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.05em;
+  }
+  
+  .lnr-graduation-hat .lnr-bubble .lnr-graduation-hat .lnr-layers .lnr-laptop-phone .lnr-rocket{
+    font-size: 40px;
+  }   
+  .p1-gradient-color, .single-services:hover .lnr {
+    background: -moz-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+    background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+    background: -ms-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .single-services {
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  .single-services .lnr {
+    font-size: 35px;
+    color: #222;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .single-services h4 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .single-services p {
+    max-width: 318px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  
+  .single-services:hover h4 {
+    color: #8490ff;
+  }   
