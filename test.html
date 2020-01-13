@@ -4,88 +4,58 @@ permalink: /test/
 title: "test"
 classes: wide
 ---
-<html>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="/assets/css/home.css">
-<script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
-<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-<style>
-/* Add the following CSS block to your own
-stylesheet. */
-.lnr {
-    display: inline-block;
-    fill: currentColor;
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.05em;
-  }
-  
-  .lnr-graduation-hat .lnr-bubble .lnr-graduation-hat .lnr-layers .lnr-laptop-phone .lnr-rocket{
-    font-size: 40px;
-  }   
-  .p1-gradient-color, .single-services:hover .lnr {
-    background: -moz-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
-    background: -webkit-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
-    background: -ms-linear-gradient(0deg, #8490ff 0%, #62bdfc 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .single-services {
-    text-align: center;
-    margin-top: 60px;
-  }
-  
-  .single-services .lnr {
-    font-size: 35px;
-    color: #222;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-  }
-  
-  .single-services h4 {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-  }
-  
-  .single-services p {
-    max-width: 318px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-  
-  .single-services:hover h4 {
-    color: #8490ff;
-  }   
-</style>
-<section class="home-about-area section-gap">
-        <div class="container">
-            <div class="row align-items-center justify-content-between">
+<button id="link-button">Link Account</button>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/
+  jquery/2.2.3/jquery.min.js"></script>
+<script src="https://cdn.plaid.com/link/v2/
+  stable/link-initialize.js">
+  </script>
+<script type="text/javascript">
+(function($) {
+  var handler = Plaid.create({
+    clientName: 'Plaid Quickstart',
+    env: '<%= PLAID_ENV %>',
+    key: '<%= PLAID_PUBLIC_KEY %>',
+    product: ['transactions'],
+    // Optional – use webhooks to get transaction and error updates
+    webhook: 'https://requestb.in',
+    onLoad: function() {
+      // Optional, called when Link loads
+    },
+    onSuccess: function(public_token, metadata) {
+      // Send the public_token to your app server.
+      // The metadata object contains info about the institution the
+      // user selected and the account ID or IDs, if the
+      // Select Account view is enabled.
+      $.post('/get_access_token', {
+        public_token: public_token,
+      });
+    },
+    onExit: function(err, metadata) {
+      // The user exited the Link flow.
+      if (err != null) {
+        // The user encountered a Plaid API error prior to exiting.
+      }
+      // metadata contains information about the institution
+      // that the user selected and the most recent API request IDs.
+      // Storing this information can be helpful for support.
+    },
+    onEvent: function(eventName, metadata) {
+      // Optionally capture Link flow events, streamed through
+      // this callback as your users connect an Item to Plaid.
+      // For example:
+      // eventName = "TRANSITION_VIEW"
+      // metadata  = {
+      //   link_session_id: "123-abc",
+      //   mfa_type:        "questions",
+      //   timestamp:       "2017-09-14T14:42:19.350Z",
+      //   view_name:       "MFA",
+      // }
+    }
+  });
 
-
-                    <h1 class="text-uppercase">Personal Details</h1>
-                    <br>
-                    <br>
-
-                    <blockquote class="generic-blockquote">
-                        <p class="fz-16">
-                             A few interesting things about me. I love to read science fiction (my favorite is Frank Herbert's Dune). I am also an avid gamer. I love to play competitive strategy games and first person shooters. Lastly, I love learning. Every day I push myself to learn something new, whether that be about machine learning, software engineeriing, or miscellaneous facts about the universe.
-                        </p>
-                        <p class="fz-16">
-                             I just finished an internship at Sprint, where I used statistics and machine learning to detect failures in business systems. I am currently finishing a Master's of Computer Science at the University of Texas at Dallas, after which I plan on searching for Data Science and Software Engineering positions in Texas, Colorado, and California.
-                        </p>
-
-                    </blockquote>
-                    <a href="/about" class="primary-btn text-uppercase">About me</a>
-
-            </div>
-        </div>
-    </section>
+  $('#link-button').on('click', function(e) {
+    handler.open();
+  });
+})(jQuery);
+</script>
