@@ -11,7 +11,6 @@ mathjax: "true"
 
 ---
 
-# How to use data science to compare two different investments apple to apple?
 
 An investment may make sense if we expect it to return more money than it costs. But returns are only part of the story because they are risky - there may be a range of possible outcomes. How does one compare different investments that may deliver similar results on average, but exhibit different levels of risks?
 
@@ -84,7 +83,7 @@ print(benchmark_data.head())
 ```
 <img src="{{ site.url }}{{ site.baseurl }}/images/sharpe_ratio/info1.png" alt="Data Info">
 
-Before we compare investment either in Microsoft or Amazon with the index of the largest 500 companies in the US, let's visualize the data, so that we'll get better understanding about what we're dealing with.
+Before comparing either investment with the index of largest 500 companies in the US, let's visualize the data, so that we'll get better understanding about what we're dealing with.
 
 ```python
 # visualize the stock_data
