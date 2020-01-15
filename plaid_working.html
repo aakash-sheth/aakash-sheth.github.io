@@ -4,7 +4,21 @@ permalink: /plaid/
 title: "test"
 classes: wide
 ---
-<button id="link-button">Link Account</button>
+<script> 
+
+function getQueryVariable(variable)
+{
+    var query = window.location.search.substring(1);
+    var vars = query.split("?");
+    for (var i=0;i<vars.length;i++) {
+            var pair = vars[i].split("=");
+            if(pair[0] == variable){return pair[1];}
+    }
+    return(false);
+}
+
+</script>
+
 <script 
 src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 <script 
@@ -22,7 +36,7 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
     key: '15bc69dc75704b64d1dd7c6d3a0fae',
     product: ['transactions'],
     // Optional, use webhooks to get transaction and error updates
-    webhook: 'https://flow.zoho.com/691632381/flow/webhook/incoming?zapikey=1001.7766df512d031adeb882c60d222d859b.99ab417b88e89689ac48bf9acfe7fdee&isdebug=false',
+    //webhook: 'https://flow.zoho.com/691632381/flow/webhook/incoming?zapikey=1001.7766df512d031adeb882c60d222d859b.99ab417b88e89689ac48bf9acfe7fdee&isdebug=false',
     // Optional, specify a language to localize Link
     language: 'en',
     // Optional, specify userLegalName and userEmailAddress to
@@ -39,7 +53,7 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
       // Select Account view is enabled.
       $.post('https://flow.zoho.com/691632381/flow/webhook/incoming?zapikey=1001.7766df512d031adeb882c60d222d859b.99ab417b88e89689ac48bf9acfe7fdee&isdebug=false', {
         public_token: public_token,
-        deal_id: '1234',
+        deal_id: getQueryVariable(deal_id),
       });
     },
     onExit: function(err, metadata) {
