@@ -11,7 +11,6 @@ mathjax: "true"
 
 ---
 
-
 An investment may make sense if we expect it to return more money than it costs. But returns are only part of the story because they are risky - there may be a range of possible outcomes. How does one compare different investments that may deliver similar results on average, but exhibit different levels of risks?
 
 The best measure to comapre two investments apple to apple with different return and risk is **Sharpe Ratio**.It compares the expected returns for two investment opportunities and calculates the additional return per unit of risk an investor could obtain by choosing one over the other. In particular, it looks at the difference in returns for two investments and compares the average difference to the standard deviation (as a measure of risk) of this difference.

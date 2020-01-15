@@ -10,11 +10,11 @@ excerpt: "Investment analysis using data science"
 mathjax: "true"
 ---
 
-The most important formula to achieve financial freedom is to become a investor not a customer. There are many ways you can invest your money. Stock market is one of many possible ways to invest your hard-earned money. The reason that savvy investors invest in stocks is that they provide the highest potential returns and over the long term, no other type of investment tends to perform as good as stock market.
+The most important formula to achieve financial freedom is to become a investor not a customer. There are many ways you can invest your money. Stock market is one of many possible ways to invest your hard-earned money. The reason that savvy investors invest in stocks is that they provide the highest potential returns and over the long term, no other type of investment tends to perform as good as stock market.<br/>
 
-There are thounds of stocks listed on US stock exchange, however not all stocks perform equily great. Thus, it is a good idead to do some prior analysis before buying any stock. In this blog I will cover few of techniques you can utilize using python pandas for analyzing historical stock prices and historical stock performance comparing with competitors.
+There are thounds of stocks listed on US stock exchange, however not all stocks perform equily great. Thus, it is a good idead to do some prior analysis before buying any stock. In this blog I will cover few of techniques you can utilize using python pandas for analyzing historical stock prices and historical stock performance comparing with competitors.<br/>
 
-Before starting our analysis you need to extract historical stock price data. You can find this data online on number of site. The easist way to load data is using [pandas_datareader](https://pydata.github.io/pandas-datareader/remote_data.html#tiingo) api. using this library you can load most updated financial data from sources like Yahoo Finance, Google Finance, Enigma etc.
+Before starting our analysis you need to extract historical stock price data. You can find this data online on number of site. The easist way to load data is using [pandas_datareader](https://pydata.github.io/pandas-datareader/remote_data.html#tiingo) api. using this library you can load most updated financial data from sources like Yahoo Finance, Google Finance, Enigma etc.<br/>
 
 ## Lets import all the necessary libraries
 ```python
@@ -28,7 +28,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 ```
 
-Now that we have all the required libraries, lets go ahead and extract Microsoft stock prices for last 10 years. 
+Now that we have all the required libraries, lets go ahead and extract Microsoft stock prices for last 10 years. <br/>
 
 ```python
 
@@ -39,7 +39,7 @@ df = web.DataReader(ticker, 'yahoo', start, end)
 df.tail()
 
 ```
-Let's plot the data for better understanding.
+Let's plot the data for better understanding.<br/>
 
 ```python
 fig=plt.plot(df[['Close']])
@@ -51,7 +51,7 @@ plt.show()
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_analysis/msft_trend.png" alt="Microsoft Price Trend">
 
 ### Rolling Mean (Moving Average) - Cut down noise.
-[Rolling mean/Moving Average (MA)](https://www.investopedia.com/articles/active-trading/052014/how-use-moving-average-buy-stocks.asp) smooths out price data by creating a constantly updated average price. This is useful to cut down “noise” in our price chart. Furthermore, a rising moving average indicates that the stock is in an uptrend, while a declining moving average indicates that it is in a downtrend. We can use 'rolling' method of pandas to calculate moving average over a specific window.
+[Rolling mean/Moving Average (MA)](https://www.investopedia.com/articles/active-trading/052014/how-use-moving-average-buy-stocks.asp) smooths out price data by creating a constantly updated average price. This is useful to cut down “noise” in our price chart. Furthermore, a rising moving average indicates that the stock is in an uptrend, while a declining moving average indicates that it is in a downtrend. We can use 'rolling' method of pandas to calculate moving average over a specific window.<br/>
 
 ```python
 # Moving average over 100 days window.
@@ -68,17 +68,18 @@ plt.savefig('msft_rolling_avg.png')
 plt.show()
 ```
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_analysis/msft_rolling_avg.png" alt="Microsoft 100 days rolling average trend">
-The Moving Average makes the line smooth and showcase the increasing or decreasing trend of stocks price. In this chart, the Moving Average showcases increasing trend the upturn or downturn of stocks price. Logically, you should buy when the stocks are experiencing downturn and sell when the stocks are experiencing upturn.
+
+The Moving Average makes the line smooth and showcase the increasing or decreasing trend of stocks price. In this chart, the Moving Average showcases increasing trend the upturn or downturn of stocks price. Logically, you should buy when the stocks are experiencing downturn and sell when the stocks are experiencing upturn.<br/>
 
 ### Stock Price Volatility
 
-Another important factor to consider while deciding long term investment is the price flactuation risk. The ideal investment should have minimum possible price flactuation and upward price trend,however in really life all stocks are subject to price flactuaton risk. We can calculate this from daily returns.
+Another important factor to consider while deciding long term investment is the price flactuation risk. The ideal investment should have minimum possible price flactuation and upward price trend,however in really life all stocks are subject to price flactuaton risk. We can calculate this from daily returns.<br/>
 
-Following is the formula you could refer to:
+Following is the formula you could refer to:<br/>
 
-$$ Returns= /frac{(profit)}{(cost)} or /frac{(final value- initial value)}{initial value} $$
+$$ Returns= \frac{(profit)}{(cost)} or \frac{(final value- initial value)}{initial value} $$
 
-Based on the formula, we could plot our returns as following.
+Based on the formula, we could plot our returns as following.<br/>
 
 ```python
 rets=close_price/close_price.shift(1)-1
@@ -149,6 +150,7 @@ for label, x, y in zip(retscomp.columns, retscomp.mean(), retscomp.std()):
 
 ```
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_analysis/risk_vs_return.png" alt=" cloud competitors risk vs return">
+
 Now you could view this neat chart of risk and return comparisons for competing stocks. Though amzon had a maximum return it also had the maximum risk. Logically, you would like to minimize the risk and maximize returns. Now, you might wonder how can you compare stocks with different risk return profile apple to apple. In such cases you should consider calculating [sharpe ratio](https://aakash-sheth.github.io/sharpe_ratio/) which tells you the average return per unit risk taken. You check my blog on sharpe ratio to know more about it.
 
 ## Correlation Analysis — Does change in price of one competitor affects other?
