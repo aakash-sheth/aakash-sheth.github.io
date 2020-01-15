@@ -5,7 +5,7 @@ title: "Stock price analysis using pandas and matplotlib."
 date: 2020-01-07
 tags: [data science for finance, data visualization ]
 header:
-  image: "/images/sharpe_ratio/soaring_mountains.png"
+  image: "\images\soaring_mountains.png"
 excerpt: "Investment analysis using data science"
 mathjax: "true"
 ---
@@ -178,11 +178,11 @@ In the next blog I will show you how to use machine learning for forecasting fut
 
 Luckily, now a days there are some great online platforms where you can see live stats and great viualizations for helping investment decisions.
 
-Following are 2 of my faviore apps which are currently offering free stocks on joining.
-1. Robinhood (1  Free Stock): https://join.robinhood.com/aakashs95
-2.Webull (2 Free Stocks):  https://act.webull.com/promotion/invitation/share.html?inviteCode=a4ZLshlm6gmo
+Following are 2 of my faviore apps which are currently offering free stocks for joining.
+1. [Robinhood](https://join.robinhood.com/aakashs95) (1  Free Stock):
+2. [Webull](https://act.webull.com/promotion/invitation/share.html?inviteCode=a4ZLshlm6gmo) (2 Free Stocks):
 
-Try Out above apps you might find some more ideas to implement.
+Try Out above apps you might find some more ideas to implement in your analysis.
 
 Happy coding:) 
 Happy Investing :)

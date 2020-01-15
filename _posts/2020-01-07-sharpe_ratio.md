@@ -5,7 +5,7 @@ title: "How to use data science to compare two different investments apple to ap
 date: 2020-01-07
 tags: [data wrangling, data science, data science for finance, data visualization ]
 header:
-  image: "/images/sharpe_ratio/save_piggy_bank_money_coins.jpg"
+  image: "\images\save-piggy-bank-money-coins.jpg"
 excerpt: "Investment analysis using data science"
 mathjax: "true"
 
