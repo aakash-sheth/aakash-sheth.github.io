@@ -4,14 +4,18 @@ permalink: /plaid/
 title: "test"
 classes: wide
 ---
-<script> 
 
+<button id="link-button">Link Account</button>
+<script 
+src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script 
+src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script type="text/javascript">
 function getQueryVariable(variable)
 {
     var query = window.location.href;
     var queryKeys=query.split('?')
     queryKeys= queryKeys[1]
-    alert(queryKeys)
     var vars = queryKeys.split('&');
     for (var i=0;i<vars.length;i++) {
             var pair = vars[i].split("=");
@@ -19,13 +23,7 @@ function getQueryVariable(variable)
     }
     return(False);
 }
-</script>
-<button id="link-button">Link Account</button>
-<script 
-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-<script 
-src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
-<script type="text/javascript">
+
 (function($) {
   var handler = Plaid.create({
     clientName: 'Plaid Quickstart',
@@ -48,7 +46,7 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
     onLoad: function() {
       // Optional, called when Link loads
     },
-    onSuccess: function(public_token, metadata, deal_id) {
+    onSuccess: function(public_token, metadata) {
       // Send the public_token to your app server.
       // The metadata object contains info about the institution the
       // user selected and the account ID or IDs, if the
@@ -56,7 +54,7 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
       var deal_id_str=getQueryVariable("deal_id")
       $.post('https://flow.zoho.com/691632381/flow/webhook/incoming?zapikey=1001.7766df512d031adeb882c60d222d859b.99ab417b88e89689ac48bf9acfe7fdee&isdebug=false', {
         public_token: public_token,
-        deal_id: deal_id_str
+        deal_id: deal_id_str,
       });
       alert(deal_id_str)
     },
@@ -88,5 +86,7 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
     handler.open();
   });
 })(jQuery);
+
+
 </script>
 <br>
