@@ -6,7 +6,7 @@ date: 2020-01-07
 tags: [data wrangling, data science, data science for finance, data visualization ]
 header:
   image: "\images\save-piggy-bank-money-coins.jpg"
-excerpt: "Investment analysis using data science"
+excerpt: "Risk Vs Return cakculation using sharpe ratio"
 mathjax: "true"
 
 ---
