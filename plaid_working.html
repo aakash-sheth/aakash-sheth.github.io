@@ -4,14 +4,8 @@ permalink: /plaid/
 title: "test"
 classes: wide
 ---
-
-<button id="link-button">Link Account</button>
-<script 
-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-<script 
-src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
-<script type="text/javascript">
-function getQueryVariable(variable)
+<script>
+    function getQueryVariable(variable)
 {
     var query = window.location.href;
     var queryKeys=query.split('?')
@@ -23,6 +17,14 @@ function getQueryVariable(variable)
     }
     return(False);
 }
+
+</script>
+<button id="link-button">Link Account</button>
+<script 
+src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+<script 
+src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+<script type="text/javascript">
 
 (function($) {
   var handler = Plaid.create({
@@ -57,7 +59,6 @@ function getQueryVariable(variable)
         deal_id: deal_id_str,
       });
       alert(window.location.href)
-      alert(deal_id_str)
     },
     onExit: function(err, metadata) {
       // The user exited the Link flow.
