@@ -2,11 +2,11 @@
 layout: single
 classes: wide
 title: "Stock price analysis using pandas and matplotlib."
-date: 2020-01-07
+date: 2020-01-14
 tags: [data science for finance, data visualization ]
 header:
   image: "\images\soaring_mountains.png"
-excerpt: "Investment analysis using data science"
+excerpt: "Stock price analysis"
 mathjax: "true"
 ---
 
