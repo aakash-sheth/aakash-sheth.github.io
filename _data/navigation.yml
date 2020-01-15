@@ -2,7 +2,7 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Data Science Blogs"
+  - title: "Portfolio"
     url: /blog/
   - title: "Resume"
     url: /docs/Resume_Aakash_Sheth(DM108).pdf
