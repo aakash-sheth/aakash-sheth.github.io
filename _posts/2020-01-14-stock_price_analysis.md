@@ -5,7 +5,7 @@ title: "Stock price analysis using pandas and matplotlib."
 date: 2020-01-07
 tags: [data science for finance, data visualization ]
 header:
-  image: "/images/sharpe_ratio/sharpe_ratio_header.jpg"
+  image: "/images/sharpe_ratio/soaring_mountains.png"
 excerpt: "Investment analysis using data science"
 mathjax: "true"
 ---
@@ -77,7 +77,7 @@ Another important factor to consider while deciding long term investment is the 
 
 Following is the formula you could refer to:<br/>
 
-$$ Returns= \frac{(profit)}{(cost)} or \frac{(final value- initial value)}{initial value} $$
+$$ Returns= \frac{(profit)}{(cost)} or \frac{(Price_final- Price_initial)}{Price_initial} $$
 
 Based on the formula, we could plot our returns as following.<br/>
 
