@@ -174,4 +174,17 @@ From here we could see most of the distributions among stocks is approximately p
 
 Notice that the maximum correlation we have is 56%. From the Scatter Matrix and Heatmap, we can find great correlations among the competing stocks.Also this helps to find the overall indutry trend.
 
+In the next blog I will show you how to use machine learning for forecasting future price trends.
 
+Luckily, now a days there are some great online platforms where you can see live stats and great viualizations for helping investment decisions.
+
+Following are 2 of my faviore apps which are currently offering free stocks on joining.
+1. Robinhood (1  Free Stock): https://join.robinhood.com/aakashs95
+2.Webull (2 Free Stocks):  https://act.webull.com/promotion/invitation/share.html?inviteCode=a4ZLshlm6gmo
+
+Try Out above apps you might find some more ideas to implement.
+
+Happy coding:) 
+Happy Investing :)
+
+Disclaimer: This disclaimer informs readers that the views, thoughts, and opinions expressed in the text belong solely to the author and should not  consider as any investment advice. This blog soley written for the education purpose.
