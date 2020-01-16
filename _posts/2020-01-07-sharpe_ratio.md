@@ -1,5 +1,4 @@
 ---
-layout: single
 classes: wide
 title: "How to use data science to compare two different investments apple to apple?"
 date: 2020-01-07

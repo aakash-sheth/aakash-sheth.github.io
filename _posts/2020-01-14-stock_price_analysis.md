@@ -1,5 +1,4 @@
 ---
-layout: single
 classes: wide
 title: "Stock price analysis using pandas and matplotlib."
 date: 2020-01-14
