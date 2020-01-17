@@ -54,18 +54,19 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
       // The metadata object contains info about the institution the
       // user selected and the account ID or IDs, if the
       // Select Account view is enabled.
-      //var query = window.location.href;
-      //var queryKeys=query.split('?')
-      //queryKeys= queryKeys[1]
-      //var vars = queryKeys.split('&');
-      //for (var i=0;i<vars.length;i++) {
-      //        var pair = vars[i].split("=");
-      //        if(pair[0] == variable){deal_id=pair[1];}
-      //}
+      var deal_id_str='123'
+      var query = window.location.href;
+      var queryKeys=query.split('?')
+      queryKeys= queryKeys[1]
+      var vars = queryKeys.split('&');
+      for (var i=0;i<vars.length;i++) {
+              var pair = vars[i].split("=");
+              if(pair[0] == variable){deal_id_str=pair[1];}
+      }
       alert('on success')
       $.post('https://flow.zoho.com/691632381/flow/webhook/incoming?zapikey=1001.7766df512d031adeb882c60d222d859b.99ab417b88e89689ac48bf9acfe7fdee&isdebug=false', {
         public_token: public_token,
-       // <!-- deal_id: deal_id, -->
+        deal_id: deal_id_str, 
       });
       
     },
