@@ -5,6 +5,7 @@ date: 2020-01-14
 tags: [Data Science for Finance, Data Visualization ]
 header:
   image: "/images/soaring_mountains.png"
+  teaser: "/images/soaring_mountains.png"
 excerpt: "Stock price analysis"
 mathjax: "true"
 ---
