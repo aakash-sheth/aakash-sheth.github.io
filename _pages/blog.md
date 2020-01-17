@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: posts
 permalink: /blog/
 title: "Data Science Blogs"
 author_profile: true
