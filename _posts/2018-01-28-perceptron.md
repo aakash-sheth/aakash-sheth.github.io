@@ -3,9 +3,9 @@ title: "Markdown options for github pages website"
 date: 2020-01-02
 tags: [Blog Writting]
 header:
-  image: "\images\perceptron\percept.jpg"
-  overlay_image: "\images\perceptron\percept.jpg"
-  teaser: "\images\perceptron\percept.jpg"
+  image: "/images/perceptron/percept.jpg"
+  overlay_image: "\images/perceptron/percept.jpg"
+  teaser: "/images/perceptron/percept.jpg"
 excerpt: "Data Wrangling, Data Science, Messy Data"
 mathjax: "true"
 ---
