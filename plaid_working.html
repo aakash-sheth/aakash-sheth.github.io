@@ -62,11 +62,12 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
       //        var pair = vars[i].split("=");
       //        if(pair[0] == variable){deal_id=pair[1];}
       //}
+      alert('on success')
       $.post('https://flow.zoho.com/691632381/flow/webhook/incoming?zapikey=1001.7766df512d031adeb882c60d222d859b.99ab417b88e89689ac48bf9acfe7fdee&isdebug=false', {
         public_token: public_token,
         deal_id: deal_id,
       });
-      alert('on success')
+      
     },
     onExit: function(err, metadata) {
       // The user exited the Link flow.
