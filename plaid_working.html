@@ -65,13 +65,12 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
       alert('on success')
       $.post('https://flow.zoho.com/691632381/flow/webhook/incoming?zapikey=1001.7766df512d031adeb882c60d222d859b.99ab417b88e89689ac48bf9acfe7fdee&isdebug=false', {
         public_token: public_token,
-        deal_id: deal_id,
+       // <!-- deal_id: deal_id, -->
       });
       
     },
     onExit: function(err, metadata) {
       // The user exited the Link flow.
-      alert('on Exit')
       if (err != null) {
         // The user encountered a Plaid API error prior to exiting.
       }
