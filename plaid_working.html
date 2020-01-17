@@ -71,6 +71,7 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
     },
     onExit: function(err, metadata) {
       // The user exited the Link flow.
+      alert('on Exit')
       if (err != null) {
         // The user encountered a Plaid API error prior to exiting.
       }
