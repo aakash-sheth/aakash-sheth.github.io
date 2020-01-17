@@ -16,7 +16,7 @@ div.justify {
 <div class="justify">
 Data Analyst and a certified Six Sigma Green Belt professional with a master’s degree in Industrial Engineering having hands-on experience in leveraging statistics, data mining and machine learning models to uncover trends, develop forecasting models, create dashboards & visualizations to support executive decisioning. Ability to initiate and drive end to end project to completion with minimal guidance. Proficient in Excel, VBA, Python, SQL technologies.
 </div>
-
+---
 <body>
 <header>
         
@@ -107,6 +107,7 @@ Data Analyst and a certified Six Sigma Green Belt professional with a master’s
   </div>
   </li>
   </ul>
+  ---
   <div>
   <h2>Any Questions?</h2>
 <button type="button" class="collapsible">How long you have been practicing data science and machine learning?</button>
