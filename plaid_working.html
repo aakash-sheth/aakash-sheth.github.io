@@ -47,18 +47,17 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
     userEmailAddress: 'jappleseed@yourapp.com',
     onLoad: function() {
       // Optional, called when Link loads
-      alert(window.location.href)
     },
     onSuccess: function(public_token, metadata) {
       // Send the public_token to your app server.
       // The metadata object contains info about the institution the
       // user selected and the account ID or IDs, if the
       // Select Account view is enabled.
-      var deal_id_str='123'
+      var deal_id_str='NA'
       var query = window.location.href;
-      var queryKeys=query.split('?')
-      var queryKeys= queryKeys[1]
-      var vars = queryKeys.split('&');
+      var vars=query.split('?')
+      var vars= vars[1]
+      var vars = vars.split('&');
       for (var i=0;i<vars.length;i++) {
               var pair = vars[i].split("=");
               if(pair[0] == 'deal_id'){deal_id_str=pair[1];}
