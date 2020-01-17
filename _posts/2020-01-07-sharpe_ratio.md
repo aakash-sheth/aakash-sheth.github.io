@@ -5,7 +5,7 @@ date: 2020-01-07
 tags: [Data Science, Data Science for Finance, Sharpe Ratio ]
 header:
   image: "/images/save-piggy-bank-money-coins.jpg"
-excerpt: "Risk Vs Return cakculation using sharpe ratio"
+excerpt: "Risk Vs Return calculation using sharpe ratio"
 mathjax: "true"
 
 ---
