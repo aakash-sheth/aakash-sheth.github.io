@@ -4,13 +4,12 @@ title: "Stock price forecasting using time series"
 date: 2020-01-14
 tags: [Data Science for Finance, Data Visualization ]
 header:
+  image: "/images/stock_price_forecasting/header.gif"
   teaser: "/images/stock_price_forecasting/msft_stock_prediction.png"
 excerpt: "Stock price analysis"
 mathjax: "true"
 ---
-
-<img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/header.gif" alt="Header image">
-
+<center><img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/header.gif" alt="Header image"><center>
 The concept behind how stock market work is very simple. The stock market allows buys and sellers to negotiate price and make trades. The demand and supply of stock governs the price for each traded stock. There are many factors that governs the demand and supply of stock. Physical factors vs psychological, Rational and irrational thinking of traders etc. all these factors make the share price volatile. And thus predicating the accurate future price of stock is one of the most difficult problem to solve.
 
 Machine learning has the potential to ease the whole process by analyzing large chuncks of data, spotting significant patterns and generating a single output that naviagtes traders towards a particular decision based on predicated asset price trend.
