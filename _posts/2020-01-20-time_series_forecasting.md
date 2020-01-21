@@ -82,6 +82,7 @@ for key,value in result[4].items():
         print('\t{}:{}'.format(key,value))
 ```
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/ADF_stats.png" alt="ADF test statistics">
+
 We can see that the p-vale is more than 0.05 and thus we can reject the null hypothesis, meaning our time series is non stationary.
 
 
@@ -103,6 +104,7 @@ plt.legend()
 ```
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/train_test_split.png" alt="Train test split">
+
 Before we go on to build our forecasting model, we need to determine optimal parameters for our model. For those optimal parameters, we need ACF and PACF plots. A nonseasonal ARIMA model is classified as an “ARIMA(p,d,q)” model, where:
 
 - **p** → Number of autoregressive terms,
@@ -142,6 +144,7 @@ plt.tight_layout()
 ```
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/acf_pacf.png" alt="ACF PACF Plot">
+
 In order to find the p and q values from the above graphs, we need to check, how many lags cross the line of threshold in the graph . From the above graph the p and q values are merely close to 3 where the graph cutts off the origin. 
 
 ## Model fitting
@@ -183,6 +186,7 @@ plt.show()
 ```
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/msft_stock_prediction.png" alt="Microsoft stock price forecasting">
+
 As you can see our model did quite handsomely. Let us also check the commonly used accuracy metrics to judge forecast results:
 
 ```python
@@ -198,4 +202,5 @@ print('MAPE: '+str(mape))
 
 ```
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/result_chart.png" alt="Microsoft stock price">
+
 Around 5.4% MAPE(Mean Absolute Percentage Error) implies the model is about 94.6% accurate in predicting the test set observations.
