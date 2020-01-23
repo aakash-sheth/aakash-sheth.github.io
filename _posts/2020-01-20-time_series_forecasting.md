@@ -34,7 +34,9 @@ from statsmodels.tsa.stattools import acf,pacf
 from statsmodels.tsa.arima_model import ARIMA
 from statsmodels.graphics.tsaplots import plot_acf,plot_pacf
 ```
+
 We are going to forecast stock price of microsoft (ticker: 'MSFT'). We will be using pandas_datareader api to extract historical stock prices from yahoo finance.
+
 
 ```python
 start = datetime.datetime(2015, 1, 1)
@@ -56,6 +58,8 @@ plt.savefig('msft_trend.png')
 plt.show()
 ```
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/msft_trendline.png" alt="Microsoft stock price for last 5 years">
+
+
 A time series is consist of three systematic components namely level, trend, seasonality, and one non-systematic component called noise.
 
 These components are defined as follows:
@@ -82,8 +86,8 @@ for key,value in result[4].items():
 ```
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/ADF_stats.png" alt="ADF test statistics">
 
-We can see that the p-vale is more than 0.05 and thus we can reject the null hypothesis, meaning our time series is non stationary.
 
+We can see that the p-vale is more than 0.05 and thus we can reject the null hypothesis, meaning our time series is non stationary.
 
 We are going to create an ARIMA model and will train it with the closing price of the stock on the test data. So let us split the data into training and test set and visualize it.
 
@@ -103,6 +107,7 @@ plt.legend()
 ```
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/train_test_split.png" alt="Train test split">
+
 
 Before we go on to build our forecasting model, we need to determine optimal parameters for our model. For those optimal parameters, we need ACF and PACF plots. A nonseasonal ARIMA model is classified as an “ARIMA(p,d,q)” model, where:
 
@@ -144,7 +149,7 @@ plt.tight_layout()
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/acf_pacf.png" alt="ACF PACF Plot">
 
-In order to find the p and q values from the above graphs, we need to check, how many lags cross the line of threshold in the graph . From the above graph the p and q values are merely close to 3 where the graph cutts off the origin. 
+In order to find the p and q values from the above graphs, we need to check, how many lags cross the line of threshold in the graph. From the above graph the p and q values are merely close to 3 where the graph cutts off the origin. 
 
 ## Model fitting
 
@@ -156,11 +161,13 @@ train_size=int(len(df_close_log)*0.90)
 train,test=df_close_log[0:train_size],df_close_log[train_size:]
 ```
 Now we have all that we want, lets go ahead and fit our model
+
 ```python
 model = ARIMA(train, order=(3,1,3))
 result_AR = model.fit(disp = -1)
 print(result_AR.summary())
 ```
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/summary.png" alt="Summary">
 
 Now the fun part, lets predict the future trend of data.
@@ -185,6 +192,7 @@ plt.show()
 ```
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/stock_price_forecasting/msft_stock_prediction.png" alt="Microsoft stock price forecasting">
+
 
 As you can see our model did quite handsomely. Let us also check the commonly used accuracy metrics to judge forecast results:
 
