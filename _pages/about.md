@@ -14,7 +14,12 @@ div.justify {
 } 
 </style>
 <div class="justify">
-Data Analyst and a certified Six Sigma Green Belt professional with a master’s degree in Industrial Engineering having hands-on experience in leveraging statistics, data mining and machine learning models to uncover trends, develop forecasting models, create dashboards & visualizations to support executive decisioning. Ability to initiate and drive end to end project to completion with minimal guidance. Proficient in ***Excel, VBA, Python, SQL*** technologies.
+My name is Aakash Sheth, I am a proud COEPian currently residing in United States. I am passioante about use of data science for social developemnt and financial freedom. I have created this site to share my personal projects and my thoughts on various topics. 
+
+I completed my Masters at University of South Florida in Industrial Engineering with focus of my studies in use of data science for processes improvement. I also have Six Sigma Green Belt Certification in Process Improvement. 
+
+Apart from that I love photography, travel and food. I am always interested in new start up ideas and cool projects. If you think we can collaborate on anything feel free to reach me out at anytime.
+
 </div>
 <hr>
 <body>
