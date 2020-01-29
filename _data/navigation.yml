@@ -6,6 +6,8 @@ main:
     url: /blog/
   - title: "Resume"
     url: /docs/Resume_Aakash_Sheth(DM108).pdf
+  - title: "Old Site"
+    url: https://iamaakash.info
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
