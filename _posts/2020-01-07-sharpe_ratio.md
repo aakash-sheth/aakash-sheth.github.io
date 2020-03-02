@@ -4,7 +4,7 @@ title: "How to use data science to compare two different investments apple to ap
 date: 2020-01-07
 tags: [Data Science, Data Science for Finance, Sharpe Ratio ]
 header:
-  image: "/images/save-piggy-bank-money-coins.jpg"
+  # image: "/images/save-piggy-bank-money-coins.jpg"
   teaser: "/images/save-piggy-bank-money-coins.jpg"
 excerpt: "Risk Vs Return calculation using sharpe ratio"
 mathjax: "true"

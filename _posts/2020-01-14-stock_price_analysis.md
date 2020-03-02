@@ -4,10 +4,11 @@ title: "Stock price analysis using pandas and matplotlib."
 date: 2020-01-14
 tags: [Data Science for Finance, Data Visualization ]
 header:
-  image: "/images/soaring_mountains.png"
+  # image: "/images/soaring_mountains.png"
   teaser: "/images/soaring_mountains.png"
 excerpt: "Stock price analysis"
 mathjax: "true"
+comments: true
 ---
 
 The most important formula to achieve financial freedom is to become a investor not a customer. There are many ways you can invest your money. Stock market is one of many possible ways to invest your hard-earned money. The reason that savvy investors invest in stocks is that they provide the highest potential returns and over the long term, no other type of investment tends to perform as good as stock market.<br/>

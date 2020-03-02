@@ -4,10 +4,11 @@ title: "Bias Variance Tradeoff"
 date: 2020-02-16
 tags: [Data Science]
 header:
-  image: "/images/bias_variance/balance_image.png"
+  # image: "/images/bias_variance/balance_image.png"
   teaser: "/images/bias_variance/balance_image.png"
 excerpt: "Bias Variance Tradeoff"
 mathjax: "true"
+comments: true
 ---
 
 Imagine you have developed a model that predicts the total number of runs in a cricket match. You have utilized all the possible stats from previous Cricket world cup and you are getting near perfect results on training data. Excited by these early results you bet on tonights match to check how many runs each team makes... but you totally miss the score board.

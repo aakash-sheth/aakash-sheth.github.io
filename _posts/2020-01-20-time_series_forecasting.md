@@ -8,6 +8,7 @@ header:
   teaser: "/images/stock_price_forecasting/msft_stock_prediction.png"
 excerpt: "Stock price analysis"
 mathjax: "true"
+comments: true
 ---
 
 The concept behind how stock market work is very simple. The stock market allows buys and sellers to negotiate price and make trades. The demand and supply of stock governs the price for each traded stock. There are many factors that governs the demand and supply of stock. Physical factors vs psychological, Rational and irrational thinking of traders etc. all these factors make the share price volatile. And thus predicating the accurate future price of stock is one of the most difficult problem to solve.
